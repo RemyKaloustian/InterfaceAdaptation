@@ -15,7 +15,7 @@ body {
 	z-index: 1;
 }
 
-label
+#subject-label
 {
 	position:absolute;
 	margin-top: -1000px;
