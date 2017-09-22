@@ -23,7 +23,19 @@ $( document ).ready(function()
           }, 500, function() {
           // Animation complete.
           });
-    
+
+          if($("#subject-label input").val().trim() != "")
+          {
+            AddSubject($("#subject-label input").val());
+            $("#subject-label input").val("");
+          }
       });
 
 });
+
+function AddSubject(subjectName)
+{
+  console.log("Adding " + subjectName );
+  $("#subjects").append( "<li><a href=\"#\">" + subjectName + "</a></li>" )
+
+}//AddSubject
