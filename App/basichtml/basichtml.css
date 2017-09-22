@@ -9,13 +9,26 @@ body {
 	top: 0px;
 	left: 300px;
 	color: #fff;
-	background: #243342;
+	background: #ff3366;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 2em;
 	z-index: 1;
+	width:70%
 }
+
 #subject-label
 {
+	width:50%;
 	position:absolute;
 	margin-top: -1000px;
+	background-color: #EEEEEE;
+	//padding-left: 200%;
+	//padding-right: 200%;
+	//padding-top: 50%;
+}
+
+#subject-label input
+{
+	position: relative;
+	//width: 200%;
 }

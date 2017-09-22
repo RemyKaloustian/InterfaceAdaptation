@@ -38,4 +38,6 @@ function AddSubject(subjectName)
   console.log("Adding " + subjectName );
   $("#subjects").append( "<li><a href=\"#\">" + subjectName + "</a></li>" )
 
+  $("#pushobj").append("<div><h3>"+ subjectName +"</h3> <a>Add homework</a><a>Delete subject</a></div>");
+
 }//AddSubject
