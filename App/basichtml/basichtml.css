@@ -16,8 +16,14 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: #243342;
+	background: #CFD8DC;
 	overflow-x: hidden;
+}
+
+#menu
+{
+	//background-color: #AA00FF;
+	/color: white;
 }
 
 .gotham-bold
@@ -35,7 +41,7 @@ body {
 	top: 0px;
 	//left: 300px;
 	color: #fff;
-	background: #81D4FA;
+	//background: #81D4FA;
 	//font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 1.3em;
 	z-index: 1;

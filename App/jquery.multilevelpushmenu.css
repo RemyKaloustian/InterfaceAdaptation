@@ -11,7 +11,7 @@
 	position: absolute;
 	overflow: hidden;
 	top: 0;
-	background: #336ca6;
+	background: #AA00FF;
 	width: auto;
 	min-height: 100%;
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -38,14 +38,14 @@
 }
 
 .multilevelpushmenu_wrapper .multilevelpushmenu_inactive {
-	background: #2e6196;
+	//background: #2e6196;
 }
 
 .multilevelpushmenu_wrapper h2 {
 	font-size: 1.5em;
 	line-height: 1em;
 	font-weight: bold;
-	color: #1f4164;
+	color: white;
 	padding: 0 .4em 0 .4em;
 }
 
