@@ -13,17 +13,18 @@ $(document).ready(function()
   {
       HideHomeworkLabel();
 
-        if($("#homework-label input").val().trim() != "")
+        if($("#homework-label input").val().trim() != "" && $("#homework-label textarea").val().trim() != "")
         {
-          AddHomework($("#homework-label input").val());
+          AddHomework($("#homework-label input").val(), $("#homework-label textarea").val());
           $("#homework-label input").val("");
+          $("#homework-label textarea").val("");
         }
     });
 
-    function AddHomework(homework)
+    function AddHomework(homework, date)
     {
         console.log("Trying to add " + homework + "in " + $("#homework-label").data("subject"));
-        $( "#" + $("#homework-label").data("subject") + " .homeworks").append("<div class=\"homework\"> "+ homework+"</div>");
+        $( "#" + $("#homework-label").data("subject") + " .homeworks").append("<div class=\"homework\"> "+ homework +", "+ date +"</div>");
     }
 
     function ShowHomeworkLabel(subject)
