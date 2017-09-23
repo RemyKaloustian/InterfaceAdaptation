@@ -20,14 +20,16 @@ $(document).ready(function()
         }
     });
 
-    function AddHomework(homework, subject)
+    function AddHomework(homework)
     {
-
+        console.log("Trying to add " + homework + "in " + $("#homework-label").data("subject"));
+        $( "#" + $("#homework-label").data("subject") + " .homeworks").append("<div class=\"homework\"> "+ homework+"</div>");
     }
 
     function ShowHomeworkLabel(subject)
     {
       $("#homework-label h4").text("New homework in " + subject);
+      $("#homework-label").data("subject", subject);
       $( "#homework-label" ).animate({
         marginLeft: "0"
         }, 500, function() {
