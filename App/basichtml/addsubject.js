@@ -1,6 +1,12 @@
 $( document ).ready(function()
 {
   $('[data-toggle="datepicker"]').datepicker();
+  console.log($(document).width());
+  console.log($("#menu").width());
+  console.log($(document).width() -  $("#menu").width());
+  $("#main").css("width",$(document).width()-  $("#menu").width());
+  $("#main").css("margin-left",$("#menu").width());
+
 
   _is_label_subject_on = false;
   _subject_label_height = $("#subject-label").height() * 2;
