@@ -16,8 +16,15 @@
 
         <link rel="stylesheet" href="../jquery.multilevelpushmenu.css">
         <link rel="stylesheet" href="basichtml.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <link  href="datepicker.css" rel="stylesheet">
+        <script src="datepicker.js"></script>
 
         <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -37,6 +44,8 @@
                     <label id="homework-label" >
                       <h4></h4>
                       <input type="text" placeholder="New Homework">
+                      <textarea data-toggle="datepicker"></textarea>
+                      <div data-toggle="datepicker"></div>
                       <a id="homework-valid" class="large button" href="#0">Validate</a>
                     </label>
 
@@ -52,7 +61,6 @@
             </nav>
         </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="../jquery.multilevelpushmenu.min.js"></script>
         <script type="text/javascript" src="basichtml.js"></script>
         <script type="text/javascript" src="addsubject.js"></script>

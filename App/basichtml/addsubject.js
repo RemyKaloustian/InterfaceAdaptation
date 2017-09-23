@@ -1,5 +1,7 @@
 $( document ).ready(function()
 {
+  $('[data-toggle="datepicker"]').datepicker();
+
   _is_label_subject_on = false;
   _subject_label_height = $("#subject-label").height() * 2;
   console.log("Height of subject label is " + _subject_label_height);
