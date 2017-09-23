@@ -16,7 +16,7 @@ $( document ).ready(function()
         }, 500, function() {
         // Animation complete.
         });
-    }
+      }
     });
 
     $( "#subject-valid" ).click(function( event )
@@ -35,7 +35,7 @@ $( document ).ready(function()
           }
       });
 
-});
+});//document ready
 
 function AddSubject(subjectName)
 {
@@ -43,6 +43,6 @@ function AddSubject(subjectName)
   $("#subjects").append( "<li><a href=\"#\">" + subjectName + "</a></li>" )
 
   $("#main").append("<div class=\"subject\" id="+subjectName+"> <div class=\"subject-header\"> <h3>"+ subjectName +
-  "</h3> <a>Add homework</a><a>Delete subject</a></div> <div class=\"homeworks\">  </div> </div>");
+  "</h3> <a class=\"addhomework\">Add homework</a><a>Delete subject</a></div> <div class=\"homeworks\">  </div> </div>");
 
 }//AddSubject

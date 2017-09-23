@@ -25,6 +25,15 @@ body {
 	//padding-left: 200%;
 	//padding-right: 200%;
 	//padding-top: 50%;
+	z-index: 1;
+}
+
+#homework-label
+{
+	background-color: #90CAF9;
+	position: absolute;
+	z-index: 1;
+
 }
 
 #subject-label input
