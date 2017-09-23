@@ -1,14 +1,18 @@
 $( document ).ready(function()
 {
-  _islabelSubjectOn = false;
+  _is_label_subject_on = false;
+  _subject_label_height = $("#subject-label").height() * 2;
+  console.log("Height of subject label is " + _subject_label_height);
+
+  $("#subject-label").css("margin-top", "-" + _subject_label_height + "px");
 
   $( "#addsubject" ).click(function( event )
   {
-    if(!_islabelSubjectOn)
+    if(!_is_label_subject_on)
     {
-      _islabelSubjectOn = true;
+      _is_label_subject_on = true;
       $( "#subject-label" ).animate({
-        top: "+=1000"
+        top: "+="+_subject_label_height
         }, 500, function() {
         // Animation complete.
         });
@@ -17,9 +21,9 @@ $( document ).ready(function()
 
     $( "#subject-valid" ).click(function( event )
     {
-        _islabelSubjectOn = false;
+        _is_label_subject_on = false;
         $( "#subject-label" ).animate({
-          top: "-=1000"
+          top: "-="+_subject_label_height
           }, 500, function() {
           // Animation complete.
           });
@@ -38,6 +42,7 @@ function AddSubject(subjectName)
   console.log("Adding " + subjectName );
   $("#subjects").append( "<li><a href=\"#\">" + subjectName + "</a></li>" )
 
-  $("#main").append("<div class=\"subject\" id="+subjectName+"> <div class=\"subject-header\"> <h3>"+ subjectName +"</h3> <a>Add homework</a><a>Delete subject</a></div> <div class=\"homeworks\">  </div> </div>");
+  $("#main").append("<div class=\"subject\" id="+subjectName+"> <div class=\"subject-header\"> <h3>"+ subjectName +
+  "</h3> <a>Add homework</a><a>Delete subject</a></div> <div class=\"homeworks\">  </div> </div>");
 
 }//AddSubject
