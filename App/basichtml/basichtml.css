@@ -1,7 +1,33 @@
+@font-face
+ {
+ 	font-family: "GothamBold";
+ 	src: url("../GOTHAM-BOLD.TTF");
+}
+
+@font-face
+ {
+ 	font-family: "GothamLight";
+ 	src: url("../GOTHAM-BOLD.TTF");
+}
+
+
+
+
 body {
 	margin: 0;
 	padding: 0;
 	background: #243342;
+	overflow-x: hidden;
+}
+
+.gotham-bold
+{
+	font-family:
+}
+
+.gotham-light
+{
+	font-family:
 }
 
 #main {
