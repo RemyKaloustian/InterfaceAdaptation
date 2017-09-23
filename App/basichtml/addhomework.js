@@ -3,9 +3,10 @@ $(document).ready(function()
 
   $("#homework-label").css("margin-left",  $( window ).width() + "px");
 
-  $(document).on('click', ".subject-header a:first-of-type", function()
+  $(document).on('click', ".subject-header a:first-of-type", function(event)
   {
-      ShowHomeworkLabel();
+      console.log($(event.target).parent().parent().attr("id"));
+      ShowHomeworkLabel($(event.target).parent().parent().attr("id"));
   });
 
   $( "#homework-valid" ).click(function( event )
@@ -14,13 +15,19 @@ $(document).ready(function()
 
         if($("#homework-label input").val().trim() != "")
         {
-          //AddSubject($("#subject-label input").val());
-          //$("#subject-label input").val("");
+          AddHomework($("#homework-label input").val());
+          $("#homework-label input").val("");
         }
     });
 
-    function ShowHomeworkLabel()
+    function AddHomework(homework, subject)
     {
+
+    }
+
+    function ShowHomeworkLabel(subject)
+    {
+      $("#homework-label h4").text("New homework in " + subject);
       $( "#homework-label" ).animate({
         marginLeft: "0"
         }, 500, function() {
