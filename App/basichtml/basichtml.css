@@ -4,14 +4,14 @@ body {
 	background: #243342;
 }
 
-#pushobj {
+#main {
 	position: absolute;
 	top: 0px;
 	left: 300px;
 	color: #fff;
-	background: #ff3366;
+	background: #81D4FA;
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 2em;
+	font-size: 1.3em;
 	z-index: 1;
 	width:70%
 }
