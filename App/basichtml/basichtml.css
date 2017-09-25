@@ -91,8 +91,9 @@ body {
   display: table;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3%;
 }
-/*.subject-header i
+.subject-header i
 {
   color: white;
   display: inline;
@@ -101,7 +102,13 @@ body {
 {
   color: white;
   display: inline;
-}*/
+  margin-left: 50px;
+}
+
+.homework
+{
+  margin-left: 70px;
+}
 
 
 /* Wobble Vertical */
