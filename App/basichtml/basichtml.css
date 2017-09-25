@@ -54,10 +54,14 @@ body {
 	position:absolute;
 	//margin-top: -1000px;
 	background-color: #E1BEE7 ;
-	//padding-left: 200%;
-	//padding-right: 200%;
-	//padding-top: 50%;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
 	z-index: 1;
+}
+#subject-valid
+{
+  background-color: #AA00FF;
 }
 
 #homework-label
