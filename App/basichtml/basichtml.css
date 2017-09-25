@@ -86,12 +86,18 @@ body {
 .subject
 {
   //background-color: #F8BBD0;
+  font-family: GothamLight;
 }
-.subject-header
+/*.subject-header i
 {
   color: white;
-  //background-color: #651FFF
+  display: inline;
 }
+.subject-header h3
+{
+  color: white;
+  display: inline;
+}*/
 
 
 /* Wobble Vertical */

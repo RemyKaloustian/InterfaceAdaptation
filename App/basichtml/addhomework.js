@@ -5,8 +5,8 @@ $(document).ready(function()
 
   $(document).on('click', ".subject-header a:first-of-type", function(event)
   {
-      console.log($(event.target).parent().parent().attr("id"));
-      ShowHomeworkLabel($(event.target).parent().parent().attr("id"));
+      console.log($(event.target).parent().parent().parent().attr("id"));
+      ShowHomeworkLabel($(event.target).parent().parent().parent().attr("id"));
   });
 
   $( "#homework-valid" ).click(function( event )
