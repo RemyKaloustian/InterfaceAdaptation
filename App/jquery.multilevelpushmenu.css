@@ -57,16 +57,16 @@
 
 .multilevelpushmenu_wrapper li {
 	cursor: pointer;
-	border-top: 1px solid #295685;
+	//border-top: 1px solid #295685;
 	padding: .4em .4em .4em .4em;
 }
 
 .multilevelpushmenu_wrapper li:last-child {
-	border-bottom: 1px solid #295685;
+	//border-bottom: 1px solid #295685;
 }
 
 .multilevelpushmenu_wrapper li:hover {
-	background-color: #295685;
+	//background-color: #295685;
 }
 
 .multilevelpushmenu_wrapper a {
