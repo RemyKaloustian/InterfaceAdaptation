@@ -87,6 +87,10 @@ body {
 {
   //background-color: #F8BBD0;
   font-family: GothamLight;
+  width:60%;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*.subject-header i
 {
