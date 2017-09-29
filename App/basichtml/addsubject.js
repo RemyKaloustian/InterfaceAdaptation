@@ -64,8 +64,11 @@ $( document ).ready(function()
 
       $(document).on('click', ".delete-subject", function(event)
       {
-        console.log("clikced mah boi");
-        $(event.target).parent().parent().remove();
+        var subject_to_delete = $(event.target).parent().parent().parent().attr("id");
+        $(event.target).parent().parent().parent().remove();
+        console.log("the subject to delete is " + subject_to_delete);
+
+
 
       });
 
