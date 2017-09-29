@@ -110,6 +110,10 @@ body {
   margin-left: 70px;
 }
 
+.subject i
+{
+  width:40px !important;
+}
 
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
