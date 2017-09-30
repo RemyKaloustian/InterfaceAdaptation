@@ -17,18 +17,18 @@ color_set.push(blue);
 
 $( document ).ready(function()
 {
-  console.log("red.p = " + red.p + ", red.s = "+red.s);
+  //console.log("red.p = " + red.p + ", red.s = "+red.s);
   $('[data-toggle="datepicker"]').datepicker();
-  console.log($(document).width());
-  console.log($("#menu").width());
-  console.log($(document).width() -  $("#menu").width());
+//  console.log($(document).width());
+  //console.log($("#menu").width());
+//  console.log($(document).width() -  $("#menu").width());
   $("#main").css("width",$(document).width()-  $("#menu").width());
   $("#main").css("margin-left",$("#menu").width());
 
 
   _is_label_subject_on = false;
   _subject_label_height = $("#subject-label").height() * 2;
-  console.log("Height of subject label is " + _subject_label_height);
+  //console.log("Height of subject label is " + _subject_label_height);
 
   $("#subject-label").css("margin-top", "-" + _subject_label_height + "px");
 
@@ -62,13 +62,22 @@ $( document ).ready(function()
       });
 
 
+//DELETION================================
       $(document).on('click', ".delete-subject", function(event)
       {
         var subject_to_delete = $(event.target).parent().parent().parent().attr("id");
         $(event.target).parent().parent().parent().remove();
         console.log("the subject to delete is " + subject_to_delete);
 
-
+        $("#subjects  a ").each(function(index, elem)
+        {
+          console.log("id = " + $(elem).attr("id"));
+          console.log("text is "+ $(elem).text());
+            if($(elem).text() == subject_to_delete)
+            {
+                $(elem).parent().remove();
+            }
+        });
 
       });
 
@@ -77,16 +86,16 @@ $( document ).ready(function()
 
 function AddSubject(subjectName)
 {
-  console.log("Adding " + subjectName );
+  //console.log("Adding " + subjectName );
   $("#subjects").append( "<li><a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a></li>" );
 
   $("#main").append("<div class=\"subject \" id="+subjectName+"> <div class=\"subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
   "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
 
   var rand  = Math.floor(Math.random() * (color_set.length - 1 + 1)) + 0;
-  console.log("incex = " + rand);
+//  console.log("incex = " + rand);
   var color = color_set[rand];
-  console.log("the color is now "+color.p);
+  //console.log("the color is now "+color.p);
   $("#"+subjectName +" .subject-header").css("background-color", color.p);
   $("#" + subjectName +" .homeworks").css("background-color", color.s);
 
