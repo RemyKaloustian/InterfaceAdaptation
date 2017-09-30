@@ -6,6 +6,13 @@ var purple = {p:"#9C27B0", s:"#CE93D8"};
 var deep_purple = {p:"#673AB7", s:"#B39DDB"};
 var indigo = {p:"#3F51B5", s:"#9FA8DA"};
 var blue = {p:"#2196F3", s:"#90CAF9"};
+var teal = {p:"#009688", s:"#80CBC4"};
+var cyan = {p:"#00BCD4", s:"#80DEEA"};
+var green = {p:"#4CAF50", s:"#A5D6A7"};
+var lime = {p:"#CDDC39", s:"#E6EE9C"};
+var brown = {p:"#795548", s:"#BCAAA4"};
+var deep_orange = {p:"#FF5722", s:"#FFAB91"};
+
 
 color_set.push(red);
 color_set.push(pink);

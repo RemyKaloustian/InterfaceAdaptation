@@ -97,6 +97,7 @@ body {
 {
   color: white;
   display: inline;
+  margin-left: 10px;
 }
 .subject-header h3
 {
@@ -207,7 +208,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #D500F9;
+  background: #37474F;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
