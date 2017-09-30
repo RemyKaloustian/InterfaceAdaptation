@@ -2,11 +2,16 @@ $(document).ready(function()
 {
 
   $("#homework-label").css("margin-left",  $( window ).width() + "px");
-
+//adding homework
   $(document).on('click', ".subject-header a:first-of-type", function(event)
   {
       console.log($(event.target).parent().parent().parent().attr("id"));
       ShowHomeworkLabel($(event.target).parent().parent().parent().attr("id"));
+  });
+//dleeting homework
+  $(document).on('click', ".delete-homework", function(event)
+  {
+      $(event.target).parent().parent().remove();
   });
 
   $( "#homework-valid" ).click(function( event )
