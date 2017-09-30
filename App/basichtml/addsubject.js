@@ -78,13 +78,23 @@ $( document ).ready(function()
 
         $("#subjects  a ").each(function(index, elem)
         {
-          console.log("id = " + $(elem).attr("id"));
-          console.log("text is "+ $(elem).text());
+          //console.log("id = " + $(elem).attr("id"));
+          //console.log("text is "+ $(elem).text());
             if($(elem).text() == subject_to_delete)
             {
                 $(elem).parent().remove();
             }
         });
+
+      });//deletion
+
+      $(document).on('click', "#subjects a", function(event)
+      {
+        if($(event.target).text() !=  "Add subject")
+        {
+          console.log($(event.target).text());
+          $("#main").prepend($("#"+$(event.target).text()));
+        }
 
       });
 
