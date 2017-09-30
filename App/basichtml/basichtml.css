@@ -116,6 +116,16 @@ body {
   width:40px !important;
 }
 
+.delete-homework
+{
+  color:white;
+}
+
+.delete-homework:hover
+{
+  color:#e3000e;
+}
+
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {

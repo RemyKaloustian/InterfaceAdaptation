@@ -24,7 +24,7 @@ $(document).ready(function()
     function AddHomework(homework, date)
     {
         console.log("Trying to add " + homework + "in " + $("#homework-label").data("subject"));
-        $( "#" + $("#homework-label").data("subject") + " .homeworks").append("<div class=\"homework\"> "+ homework +", "+ date +"</div>");
+        $( "#" + $("#homework-label").data("subject") + " .homeworks").append("<div class=\"homework\"> "+ homework +", "+ date +"<a class=\"delete-homework\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div>");
     }
 
     function ShowHomeworkLabel(subject)
