@@ -93,6 +93,16 @@ body {
   margin-right: auto;
   margin-top: 3%;
 }
+
+.m-subject
+{
+  font-family: GothamLight;
+  width:95%;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
 .subject-header i
 {
   color: white;
