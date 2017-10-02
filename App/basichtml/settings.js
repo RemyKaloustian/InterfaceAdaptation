@@ -6,6 +6,7 @@ $(document).ready(function()
   {
     _is_mobile = true;
     console.log("IN MOBILE");
+    ToMobile();
   }
 
   });

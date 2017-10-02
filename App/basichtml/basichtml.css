@@ -134,6 +134,7 @@ body {
   position: fixed;
   right:50px;
   bottom:15px;
+  display: none;
 }
 
 /* Wobble Vertical */
