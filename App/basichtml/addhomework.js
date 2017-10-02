@@ -8,6 +8,12 @@ $(document).ready(function()
       console.log($(event.target).parent().parent().parent().attr("id"));
       ShowHomeworkLabel($(event.target).parent().parent().parent().attr("id"));
   });
+
+  $(document).on('click', ".subject-header", function(event)
+  {
+      console.log($(event.target).parent().attr("id"));
+      ShowHomeworkLabel($(event.target).parent().attr("id"));
+  });
 //dleeting homework
   $(document).on('click', ".delete-homework", function(event)
   {
