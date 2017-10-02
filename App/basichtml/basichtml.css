@@ -103,6 +103,11 @@ body {
   margin-right: auto;
   margin-top: 3%;
 }
+
+.m-subject h3
+{
+  font-size: 2em;
+}
 .subject-header i
 {
   color: white;
