@@ -54,16 +54,8 @@ $( document ).ready(function()
 
     $("#m-add-subject").click(function( event )
     {
-      if(!_is_label_subject_on)
-      {
-        _is_label_subject_on = true;
-        $( "#subject-label" ).animate({
-          top: "+="+_subject_label_height
-          }, 500, function() {
-          // Animation complete.
-          });
-        }
-      });
+        ShowNewSubjectLabel();
+    });
 
     $( "#subject-valid" ).click(function( event )
     {
@@ -113,6 +105,19 @@ $( document ).ready(function()
 
 
 });//document ready
+
+function ShowNewSubjectLabel()
+{
+  if(!_is_label_subject_on)
+  {
+    _is_label_subject_on = true;
+    $( "#subject-label" ).animate({
+      top: "+="+_subject_label_height
+      }, 500, function() {
+      // Animation complete.
+      });
+    }
+}
 
 function AddSubject(subjectName)
 {
