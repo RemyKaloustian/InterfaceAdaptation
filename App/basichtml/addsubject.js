@@ -52,6 +52,19 @@ $( document ).ready(function()
       }
     });
 
+    $("#m-add-subject").click(function( event )
+    {
+      if(!_is_label_subject_on)
+      {
+        _is_label_subject_on = true;
+        $( "#subject-label" ).animate({
+          top: "+="+_subject_label_height
+          }, 500, function() {
+          // Animation complete.
+          });
+        }
+      });
+
     $( "#subject-valid" ).click(function( event )
     {
         _is_label_subject_on = false;

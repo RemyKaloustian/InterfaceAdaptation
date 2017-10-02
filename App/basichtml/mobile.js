@@ -1,5 +1,5 @@
 function ToMobile()
 {
   //Showing the new subject button
-  $("#m-new-subject").css("display", "block");
+  $("#m-add-subject").css("display", "block");
 }
