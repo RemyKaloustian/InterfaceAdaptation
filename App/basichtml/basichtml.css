@@ -126,6 +126,16 @@ body {
   color:#e3000e;
 }
 
+
+/*""""""""""""MOBILE"""""""""""""""""""*/
+
+#m-new-subject
+{
+  position: fixed;
+  right:50px;
+  bottom:15px;
+}
+
 /* Wobble Vertical */
 @-webkit-keyframes hvr-wobble-vertical {
   16.65% {
