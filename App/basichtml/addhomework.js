@@ -11,8 +11,16 @@ $(document).ready(function()
 
   $(document).on('click', ".subject-header", function(event)
   {
-      console.log($(event.target).parent().attr("id"));
-      ShowHomeworkLabel($(event.target).parent().attr("id"));
+    if(_is_mobile)
+    {
+      if($(event.target).parent().attr("class") != "delete-subject")
+      {
+        console.log($(event.target).parent().attr("class"));
+        //console.log($(event.target).parent().attr("id"));
+        ShowHomeworkLabel($(event.target).parent().attr("id"));
+      }
+    }
+
   });
 //dleeting homework
   $(document).on('click', ".delete-homework", function(event)
