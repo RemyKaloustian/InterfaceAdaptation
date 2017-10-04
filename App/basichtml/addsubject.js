@@ -93,6 +93,7 @@ $( document ).ready(function()
 
       });//deletion
 
+//DESKTOP
       $(document).on('click', "#subjects a", function(event)
       {
         if($(event.target).text() !=  "Add subject")
@@ -103,6 +104,17 @@ $( document ).ready(function()
 
       });
 
+      //mobile
+      $(document).on('click', "#m-subjects a", function(event)
+      {
+        if($(event.target).text() !=  "Close")
+        {
+          console.log($(event.target).text());
+          $("#main").prepend($("#"+$(event.target).text()));
+          $("#m-subjects").css("display", "none");
+        }
+
+      });
 
       $(document).on('click', "#m-show-subjects", function(event)
       {
