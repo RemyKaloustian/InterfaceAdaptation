@@ -104,6 +104,13 @@ $( document ).ready(function()
       });
 
 
+      $(document).on('click', "#m-show-subjects", function(event)
+      {
+        $("#m-subjects").css("display","block");
+
+      });
+
+
 });//document ready
 
 function ShowNewSubjectLabel()
