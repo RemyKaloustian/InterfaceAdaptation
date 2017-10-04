@@ -71,9 +71,14 @@ body {
 
 #homework-label
 {
-	background-color: #90CAF9;
+	background-color: #F8BBD0;
 	position: absolute;
 	z-index: 1;
+  width:50%;
+  padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 2%;
+  font-family: GothamLight !important;
 
 }
 
