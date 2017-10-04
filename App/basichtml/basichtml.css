@@ -160,6 +160,20 @@ body {
   right:50px;
   bottom:15px;
   display: none;
+  background-color: #455A64;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: GothamBold;
+}
+
+#m-menu a
+{
+  color: white !important;
+  padding-top:20px;
+  padding-bottom:20px;
+
 }
 
 #m-subjects
