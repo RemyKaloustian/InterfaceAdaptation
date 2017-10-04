@@ -7,4 +7,6 @@ function ToMobile()
   $("#subject-label").css("width", "100%");
   $("#subject-label input").css("height", "80px");
 
+  $("#homework-label").css("width", "100%");
+
 }
