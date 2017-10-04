@@ -110,6 +110,12 @@ $( document ).ready(function()
 
       });
 
+      $(document).on('click', "#m-subjects a:first-of-type", function(event)
+      {
+        $("#m-subjects").css("display","none");
+
+      });
+
 
 });//document ready
 
