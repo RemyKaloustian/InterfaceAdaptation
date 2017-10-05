@@ -10,6 +10,14 @@
  	src: url("../GOTHAM-LIGHT.TTF");
 }
 
+@font-face
+ {
+ 	font-family: "Raleway";
+ 	src: url("../Raleway-BlackItalic.ttf");
+}
+
+
+
 
 
 
@@ -18,6 +26,13 @@ body {
 	padding: 0;
 	background: #EDE7F6;
 	overflow-x: hidden;
+}
+
+h1
+{
+  text-align: center;
+  font-family: Raleway;
+  color:black;
 }
 
 #menu
