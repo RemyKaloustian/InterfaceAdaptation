@@ -34,30 +34,31 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <label id="subject-label" class="gotham-light" >
+          <input type="text" placeholder="New Subject">
+          <a id="subject-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
+        </label>
+
+        <label id="homework-label" class="gotham-light">
+          <input type="text" placeholder="New Homework">
+          <textarea data-toggle="datepicker"></textarea>
+          <div data-toggle="datepicker"></div>
+          <a id="homework-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
+        </label>
 
 
         <div id="main">
-                
-                    <label id="subject-label" class="gotham-light" >
-                      <input type="text" placeholder="New Subject">
-                      <a id="subject-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
-                    </label>
-
-                    <label id="homework-label" class="gotham-light">
-                      <input type="text" placeholder="New Homework">
-                      <textarea data-toggle="datepicker"></textarea>
-                      <div data-toggle="datepicker"></div>
-                      <a id="homework-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
-                    </label>
-
                     <div id="m-subjects">
-                      <a>Close</a><br />
+                      <div id="m-subjects-list">
+
+                      </div>
+                      <a id="m-close-subjects">Close</a><br />
                     </div>
 
                     <div id="m-menu">
                       <a id="m-show-subjects" class="hvr-sweep-to-right" href="#0">Show Subjects</a>
-                      <br />
-                      <a id="m-add-subject" class="hvr-sweep-to-right" href="#0">New Subject</a>
+
+                      <a id="m-add-subject" class="hvr-sweep-to-right" href="#0">Add Subject</a>
                     </div>
 
         </div>
@@ -65,6 +66,8 @@
             <nav>
                 <ul id="subjects" class="gotham-light">
                   <a id="addsubject" class="gotham-bold" href="#0">Add subject</a>
+
+
                 </ul>
             </nav>
         </div>

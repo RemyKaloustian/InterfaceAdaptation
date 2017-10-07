@@ -39,6 +39,8 @@ h1
 {
 	//background-color: #AA00FF;
 	/color: white;
+  max-height: 100%;
+  overflow-y: scroll !important;
 }
 
 .gotham-bold
@@ -72,7 +74,7 @@ h1
 	padding-left: 10%;
 	padding-right: 10%;
 	padding-top: 2%;
-	z-index: 1;
+	z-index: 11;
 }
 .valid-button
 {
@@ -88,7 +90,7 @@ h1
 {
 	background-color: #F8BBD0;
 	position: absolute;
-	z-index: 1;
+	z-index: 11;
   width:50%;
   padding-left: 10%;
 	padding-right: 10%;
@@ -172,12 +174,13 @@ h1
 #m-menu
 {
   position: fixed;
-  right:50px;
-  bottom:15px;
+  //right:50px;
+  bottom:1px;
+  width:100%;
   display: none;
   background-color: #455A64;
-  padding-left: 30px;
-  padding-right: 30px;
+  //padding-left: 30px;
+  //padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-family: GothamBold;
@@ -188,7 +191,8 @@ h1
   color: white !important;
   padding-top:20px;
   padding-bottom:20px;
-
+  padding-left: 20px;
+  width:48%;
 }
 
 #m-subjects
@@ -203,23 +207,31 @@ h1
   text-align: center;
   padding-top: 10%;
   max-width: 100%;
-  overflow-y: auto;
 }
 
 #m-subjects a
 {
   color: white !important;
-  padding-top:20px;
-  padding-bottom:20px;
+  padding-top:5px;
+  padding-bottom:5px;
   font-family: GothamBold;
+
 }
 
-#m-subjects a:first-of-type
+#m-subjects-list
+{
+  height: 70%;
+  overflow-y: auto;
+
+}
+
+#m-close-subjects
 {
   border: solid 1px white;
   padding-left: 30%;
   padding-right: 30%;
-
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 /* Wobble Vertical */

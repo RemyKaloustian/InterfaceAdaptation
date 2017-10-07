@@ -38,6 +38,11 @@ $( document ).ready(function()
   //console.log("Height of subject label is " + _subject_label_height);
 
   $("#subject-label").css("margin-top", "-" + _subject_label_height + "px");
+  if(!_is_mobile)
+  {
+    $("#subject-label").css("margin-left", $("#menu").width());
+  }
+  $("#subject-label").css("margin-left", )
 
   $( "#addsubject" ).click(function( event )
   {
@@ -121,6 +126,7 @@ $( document ).ready(function()
         $("#m-subjects").css("display","block");
 
       });
+      //CHANGE HERE
 
       $(document).on('click', "#m-subjects a:first-of-type", function(event)
       {
@@ -150,7 +156,7 @@ function AddSubject(subjectName)
 
   if(_is_mobile)
   {
-    $("#m-subjects").append( "<a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a><br>" );
+    $("#m-subjects-list").append( "<a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a><br>" );
 
     $("#main").append("<div class=\"m-subject \" id="+subjectName+"> <div class=\"subject-header m-subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
     "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
