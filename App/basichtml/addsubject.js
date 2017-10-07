@@ -41,6 +41,8 @@ $( document ).ready(function()
   if(!_is_mobile)
   {
     $("#subject-label").css("margin-left", $("#menu").width());
+    //$("#homemwork-label").css("margin-left", $("#menu").width());
+
   }
   $("#subject-label").css("margin-left", )
 

@@ -50,11 +50,22 @@ $(document).ready(function()
     {
       $("#homework-label h4").text("New homework in " + subject);
       $("#homework-label").data("subject", subject);
-      $( "#homework-label" ).animate({
-        marginLeft: "0"
-        }, 500, function() {
-        // Animation complete.
-        });
+      if(_is_mobile)
+      {
+        $( "#homework-label" ).animate({
+          marginLeft: "0"
+          }, 500, function() {
+          // Animation complete.
+          });
+      }
+      else
+      {
+        $( "#homework-label" ).animate({
+          marginLeft: $("#menu").width()
+          }, 500, function() {
+          // Animation complete.
+          });
+      }
     }
 
     function HideHomeworkLabel()
