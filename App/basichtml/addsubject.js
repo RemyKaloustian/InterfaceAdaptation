@@ -1,5 +1,5 @@
-var color_set=[];
-
+//Les couleurs de fond des matières sont prises aléatoirement parmi les couleurs suivantes
+var color_set=[];//le tableau de couleurs
 var red = {p:"#F44336", s:"#EF9A9A"};
 var pink = {p:"#E91E63", s:"#F48FB1"};
 var purple = {p:"#9C27B0", s:"#CE93D8"};
@@ -13,123 +13,130 @@ var lime = {p:"#CDDC39", s:"#E6EE9C"};
 var brown = {p:"#795548", s:"#BCAAA4"};
 var deep_orange = {p:"#FF5722", s:"#FFAB91"};
 
-
+//on ajoute les couleurs au tableau
 color_set.push(red);
 color_set.push(pink);
 color_set.push(purple);
 color_set.push(deep_purple);
 color_set.push(indigo);
 color_set.push(blue);
+color_set.push(teal);
+color_set.push(cyan);
+color_set.push(green);
+color_set.push(lime);
+color_set.push(brown);
+color_set.push(deep_orange);
+
+
+
 
 
 $( document ).ready(function()
 {
-  //console.log("red.p = " + red.p + ", red.s = "+red.s);
-  $('[data-toggle="datepicker"]').datepicker();
-//  console.log($(document).width());
-  //console.log($("#menu").width());
-//  console.log($(document).width() -  $("#menu").width());
+  $('[data-toggle="datepicker"]').datepicker();//initialisation du datepicker
+  //la largeur du contenu est la largeur de la fenêtre moins la largeur du menu
   $("#main").css("width",$(document).width()-  $("#menu").width());
+  //On écarte le contenu de "la largeur du menu"
   $("#main").css("margin-left",$("#menu").width());
-
-
+  //permet de savoir si le formulaire de nouvelle matière est affiché
   _is_label_subject_on = false;
+  //On stocke la hauteur du formulaire de nouvelle matière
   _subject_label_height = $("#subject-label").height() * 2;
-  //console.log("Height of subject label is " + _subject_label_height);
-
+ //pour pouvoir lui mettre un margin de - sa hauteur (comme ça il est en dehors de l'affichage)
   $("#subject-label").css("margin-top", "-" + _subject_label_height + "px");
   if(!_is_mobile)
   {
+    //si on n'est pas sur mobile, le formulaire de nouvelle matière est poussée à droite de "la largeur du menu"
     $("#subject-label").css("margin-left", $("#menu").width());
-    //$("#homemwork-label").css("margin-left", $("#menu").width());
-
   }
-  $("#subject-label").css("margin-left", )
 
+//Au clic sur le bouton d'ajout de matière
   $( "#addsubject" ).click(function( event )
   {
+    //Si on a pas déjà affiché le formulaire de nouvelle matière
     if(!_is_label_subject_on)
     {
       _is_label_subject_on = true;
+      //on fait bouger le formulaire de nouvelle matière en bas pour l'afficher
       $( "#subject-label" ).animate({
         top: "+="+_subject_label_height
         }, 500, function() {
-        // Animation complete.
         });
       }
-    });
+    });//click()
 
+    //Au clic sur le bouton d'ajout de matière, sur mobile
     $("#m-add-subject").click(function( event )
     {
         ShowNewSubjectLabel();
     });
 
+//A la validation du formulaire denouvelle matière
     $( "#subject-valid" ).click(function( event )
     {
         _is_label_subject_on = false;
+        //On cache le formulaire
         $( "#subject-label" ).animate({
           top: "-="+_subject_label_height
           }, 500, function() {
-          // Animation complete.
           });
 
+//Si les données rentrées sont valides, on ajoute la matière
           if($("#subject-label input").val().trim() != "")
           {
-            AddSubject($("#subject-label input").val());
-            $("#subject-label input").val("");
+            AddSubject($("#subject-label input").val());//Ajout de la matière
+            $("#subject-label input").val("");//réinitialisation du formulaire
           }
       });
 
 
-//DELETION================================
+//Au clic sur le bouton de suppression de la matière
       $(document).on('click', ".delete-subject", function(event)
       {
+        //On stocke la matière à supprimer
         var subject_to_delete = $(event.target).parent().parent().parent().attr("id");
+        //On elève la div correspondante à cette matière
         $(event.target).parent().parent().parent().remove();
-        console.log("the subject to delete is " + subject_to_delete);
 
+        //on parcourt le menu
         $("#subjects  a ").each(function(index, elem)
         {
-          //console.log("id = " + $(elem).attr("id"));
-          //console.log("text is "+ $(elem).text());
+          //Si un élément de menu a le même nom que la matière à supprimer
             if($(elem).text() == subject_to_delete)
             {
-                $(elem).parent().remove();
+                $(elem).parent().remove(); //on supprime l'élément du menu
             }
         });
+      });//suppression
 
-      });//deletion
-
-//DESKTOP
+//AU clic sur un élément du menu, BUREAU
       $(document).on('click', "#subjects a", function(event)
       {
-        if($(event.target).text() !=  "Add subject")
+        if($(event.target).text() !=  "Add subject") // Si on a cliqué sur une matière
         {
-          console.log($(event.target).text());
+          //On place la div de la matière en premier
           $("#main").prepend($("#"+$(event.target).text()));
         }
-
       });
 
-      //mobile
+      //Au clic sur un élément du menu, MOBILE
       $(document).on('click', "#m-subjects a", function(event)
       {
-        if($(event.target).text() !=  "Close")
+        if($(event.target).text() !=  "Close") //Si on clique sur une matière
         {
-          console.log($(event.target).text());
+          //on afiche cette matière en premier
           $("#main").prepend($("#"+$(event.target).text()));
+          //On cache la div de menu mobile
           $("#m-subjects").css("display", "none");
         }
-
       });
 
+//Au clic sur le bouton des matières, MOBILE
       $(document).on('click', "#m-show-subjects", function(event)
       {
-        $("#m-subjects").css("display","block");
-
+        $("#m-subjects").css("display","block");//On affiche le menu avec les matières
       });
       //CHANGE HERE
-
       $(document).on('click', "#m-subjects a:first-of-type", function(event)
       {
         $("#m-subjects").css("display","none");

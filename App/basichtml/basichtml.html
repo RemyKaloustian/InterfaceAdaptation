@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--prise en charge des versions d'internet explorer-->
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -10,35 +11,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+<!--Import de css-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext,latin-ext,cyrillic'
+        rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css">
         <link rel="stylesheet" href="../../foundation-6.4.2-complete/css/foundation.css" />
-
         <link rel="stylesheet" href="../jquery.multilevelpushmenu.css">
         <link rel="stylesheet" href="basichtml.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
         <link  href="datepicker.css" rel="stylesheet">
+<!--Import de javascript-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="settings.js"></script>
         <script src="mobile.js"></script>
-
-
         <script src="datepicker.js"></script>
-
         <script type="text/javascript" src="http://oss.maxcdn.com/libs/modernizr/2.6.2/modernizr.min.js"></script>
-
     </head>
+
+
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <!--Formulaire pour les nouvelles matières-->
         <label id="subject-label" class="gotham-light" >
           <input type="text" placeholder="New Subject">
           <a id="subject-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
         </label>
-
+        <!--Formulaire pour les nouveaux devoirs-->
         <label id="homework-label" class="gotham-light">
           <input type="text" placeholder="New Homework">
           <textarea data-toggle="datepicker"></textarea>
@@ -46,56 +43,51 @@
           <a id="homework-valid" class="large button hvr-wobble-vertical valid-button" href="#0">Validate</a>
         </label>
 
-
+        <!--Contient les matières et leurs devoirs-->
         <div id="main">
-                    <div id="m-subjects">
-                      <div id="m-subjects-list">
-
-                      </div>
-                      <a id="m-close-subjects">Close</a><br />
-                    </div>
-
-                    <div id="m-menu">
-                      <a id="m-show-subjects" class="hvr-sweep-to-right" href="#0">Show Subjects</a>
-
-                      <a id="m-add-subject" class="hvr-sweep-to-right" href="#0">Add Subject</a>
-                    </div>
-
+            <div id="m-subjects">
+              <div id="m-subjects-list">
+              </div>
+              <a id="m-close-subjects">Close</a><br />
+            </div>
+            <div id="m-menu">
+              <a id="m-show-subjects" class="hvr-sweep-to-right" href="#0">Show Subjects</a>
+              <a id="m-add-subject" class="hvr-sweep-to-right" href="#0">Add Subject</a>
+            </div>
         </div>
+
+        <!--menu de côté-->
         <div id="menu">
             <nav>
                 <ul id="subjects" class="gotham-light">
                   <a id="addsubject" class="gotham-bold" href="#0">Add subject</a>
-
-
                 </ul>
             </nav>
         </div>
 
+        <!--Ressources affichées seulement sur mobile-->
         <div id="resources">
           <div id="resources-content">
             <img src="../resources/1.png" alt="resource 1">
             <br />
             <img src="../resources/2.png" alt="resource 2">
-            <br />            
+            <br />
             <img src="../resources/3.png" alt="resource 3">
-
           </div>
 
           <div id="resources-menu">
             <a class="hvr-sweep-to-right"> Add</a>
             <a id="close-resources" class="hvr-sweep-to-right"> Close</a>
           </div>
-
         </div>
 
 
 
+        <!--Autres imports de javascript-->
         <script src="../jquery.multilevelpushmenu.min.js"></script>
         <script type="text/javascript" src="basichtml.js"></script>
         <script type="text/javascript" src="addsubject.js"></script>
         <script type="text/javascript" src="addhomework.js"></script>
-
 
     </body>
 </html>
