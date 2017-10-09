@@ -167,6 +167,55 @@ h1
 {
   color:#e3000e;
 }
+#resources
+{
+  display: none;
+  position: absolute;
+  width:100%;
+  height: 100%;
+  z-index: 333;
+  background-color:#78909C;
+}
+
+#resources-content
+{
+  min-height:80%;
+  overflow-y: auto;
+}
+
+#resources-menu
+{
+  position: fixed;
+  //right:50px;
+  bottom:1px;
+  width:100%;
+  background-color: #455A64;
+  //padding-left: 30px;
+  //padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: GothamBold;
+}
+
+#resources-content img
+{
+  width:30%;
+  display: block;
+  margin: 0 auto;
+}
+
+#resources-menu a
+{
+  color: white !important;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left: 20px;
+  width:48% !important;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
 
 
 /*""""""""""""MOBILE"""""""""""""""""""*/

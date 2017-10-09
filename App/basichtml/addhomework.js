@@ -13,7 +13,7 @@ $(document).ready(function()
   {
     if(_is_mobile)
     {
-      if($(event.target).parent().attr("class") != "delete-subject")
+      if($(event.target).parent().attr("class") != "delete-subject" && $(event.target).parent().attr("class") != "show-resources")
       {
         console.log($(event.target).parent().attr("class"));
         //console.log($(event.target).parent().attr("id"));
@@ -22,10 +22,22 @@ $(document).ready(function()
     }
 
   });
-//dleeting homework
+//deleting homework
   $(document).on('click', ".delete-homework", function(event)
   {
       $(event.target).parent().parent().remove();
+  });
+
+//showing resources
+  $(document).on('click', ".subject-header .show-resources", function(event)
+  {
+      $("#resources").css("display", "block");
+  });
+
+  //closing resources
+  $(document).on('click', "#close-resources", function(event)
+  {
+      $("#resources").css("display", "none");
   });
 
   $( "#homework-valid" ).click(function( event )

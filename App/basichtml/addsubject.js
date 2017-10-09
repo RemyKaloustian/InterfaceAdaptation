@@ -161,7 +161,7 @@ function AddSubject(subjectName)
     $("#m-subjects-list").append( "<a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a><br>" );
 
     $("#main").append("<div class=\"m-subject \" id="+subjectName+"> <div class=\"subject-header m-subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
-    "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
+    "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a>   <a class=\"show-resources\"><i class=\"fa fa-file-text\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
   }
   else
   {
