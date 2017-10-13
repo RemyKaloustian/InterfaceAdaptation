@@ -136,11 +136,12 @@ $( document ).ready(function()
       {
         $("#m-subjects").css("display","block");//On affiche le menu avec les matières
       });
-      //CHANGE HERE
+
+      //Au clic sur le premier a de #m-subjects
       $(document).on('click', "#m-subjects a:first-of-type", function(event)
       {
+        //On cache les matières
         $("#m-subjects").css("display","none");
-
       });
 
 
@@ -151,37 +152,37 @@ function ShowNewSubjectLabel()
   if(!_is_label_subject_on)
   {
     _is_label_subject_on = true;
+    //On fait descendre le formulaire de nouvelle matière pour qu'il soit visible
     $( "#subject-label" ).animate({
       top: "+="+_subject_label_height
       }, 500, function() {
-      // Animation complete.
-      });
+        });
     }
-}
+}//ShowNewSubjectLabel()
 
 function AddSubject(subjectName)
 {
-  //console.log("Adding " + subjectName );
-
   if(_is_mobile)
   {
+    //On ajoute la matière dans la liste des matières
     $("#m-subjects-list").append( "<a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a><br>" );
-
+    //On ajoute une section dédiée à la matière
     $("#main").append("<div class=\"m-subject \" id="+subjectName+"> <div class=\"subject-header m-subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
     "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a>   <a class=\"show-resources\"><i class=\"fa fa-file-text\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
   }
   else
   {
+    //On ajoute la matière à la liste des matières
     $("#subjects").append( "<li><a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a></li>" );
-
+    //On ajoute une section dédiée à la matière
     $("#main").append("<div class=\"subject \" id="+subjectName+"> <div class=\"subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
     "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
   }
 
+  //On détermine une couleur au hasard dans le tableau de couleur
   var rand  = Math.floor(Math.random() * (color_set.length - 1 + 1)) + 0;
-//  console.log("incex = " + rand);
   var color = color_set[rand];
-  //console.log("the color is now "+color.p);
+  //On applique la couleur trouvée sur la section de la matière
   $("#"+subjectName +" .subject-header").css("background-color", color.p);
   $("#" + subjectName +" .homeworks").css("background-color", color.s);
 
