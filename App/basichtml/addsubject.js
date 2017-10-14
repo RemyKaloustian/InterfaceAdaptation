@@ -176,7 +176,7 @@ function AddSubject(subjectName)
     $("#subjects").append( "<li><a href=\"#\" class=\"hvr-sweep-to-right\">" + subjectName + "</a></li>" );
     //On ajoute une section dédiée à la matière
     $("#main").append("<div class=\"subject \" id="+subjectName+"> <div class=\"subject-header\"> <h3 class=\"subject-title gotham-bold\">"+ subjectName +
-    "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
+    "</h3> <a class=\"addhomework\"><i class=\"fa fa-plus-circle\" aria-hidden=\"true\"></i></a><a class=\"delete-subject\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a><a class=\"show-resources\"><i class=\"fa fa-file-text\" aria-hidden=\"true\"></i></a></div> <div class=\"homeworks\">  </div> </div>");
   }
 
   //On détermine une couleur au hasard dans le tableau de couleur

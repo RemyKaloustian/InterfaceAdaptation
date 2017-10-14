@@ -167,7 +167,35 @@ h1
 {
   color:#e3000e;
 }
+
 #resources
+{
+  display: none;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+#resources img
+{
+  width:30%;
+  display: block;
+  margin: 0 auto;
+}
+
+.delete-res
+{
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  width: 100%;
+  background-color: #FF5566;
+  color: white;
+  text-align: center;
+}
+
+
+
+#m-resources
 {
   display: none;
   position: absolute;
@@ -184,7 +212,7 @@ h1
   overflow-y: auto;
 }
 
-#resources-menu
+#m-resources-menu
 {
   position: fixed;
   //right:50px;
@@ -198,14 +226,14 @@ h1
   font-family: GothamBold;
 }
 
-#resources-content img
+#m-resources-content img
 {
   width:30%;
   display: block;
   margin: 0 auto;
 }
 
-#resources-menu a
+#m-resources-menu a
 {
   color: white !important;
   padding-top:20px;
