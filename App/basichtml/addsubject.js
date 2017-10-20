@@ -144,6 +144,14 @@ $( document ).ready(function()
         $("#m-subjects").css("display","none");
       });
 
+      $(document).on('click', ".delete-res", function(event)
+      {
+        //On cache les matières
+        $(event.target).parent().remove();
+        //$(event.target + " + img").remove();
+        console.log("Yeah boi");
+      });
+
 
 });//document ready
 
