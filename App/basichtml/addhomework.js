@@ -38,8 +38,10 @@ $(document).ready(function()
   $(document).on('click', ".subject-header .show-resources", function(event)
   {
     //On affiche les ressources
+    console.log("clicked resources");
     if(_is_mobile)
     {
+      console.log("Showing resources");
       $("#m-resources").css("display", "block");
     }
     else
@@ -64,7 +66,7 @@ $(document).ready(function()
   $(document).on('click', "#close-resources", function(event)
   {
     //On cache les ressources
-      $("#resources").css("display", "none");
+      $("#m-resources").css("display", "none");
   });
 
 //A la validation du formulaire de devoir
